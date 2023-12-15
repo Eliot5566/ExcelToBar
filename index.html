@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel 轉 柱狀圖 (重量最高的前10種產品)</title>
+    <script src="transform.js"></script>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #chart-container {
+            width: 80%;
+            margin: 0 auto;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excel 轉 柱狀圖 (重量最高的前10種產品)</h1>
+    <input type="file" id="excel-file" accept=".xlsx, .xls" />
+    <button id="generate-chart">生成圖表</button>
+    <div id="chart-container">
+        <canvas id="bar-chart"></canvas>
+    </div>
+
+    <!-- 引入 SheetJS 和 Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
